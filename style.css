@@ -1,0 +1,226 @@
+body {
+  
+	margin: 0;
+  	font-family: 'Open Sans', sans-serif;
+
+  	height: 100%;
+}
+
+/*.parallax { 
+    /* The image used 
+    background-image: url("bg.jpg");*/
+
+    /* Full height */ /*
+    height: 100%; 
+
+     Create the parallax scrolling effect 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+
+h1 {
+	color: 	#F2EED7;
+	font-size: 50px;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+h2 {
+	color: #F2EED7;
+	font-size: 18px;
+	font-weight: normal;
+	margin-top: 0;
+}
+
+h3 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: normal;
+  margin-top: 0;
+  padding-top: 100px;
+}
+
+h4 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.me {
+	height: 150px;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: #262d2e;
+	margin-top: 40px;
+}
+
+.bio {
+	color: 	#F2EED7;
+	font-size: 14px;
+	text-align: left;
+}
+
+.credits {
+	color: #1B232E;
+	font-size: 10px;
+	padding-top: 120px;
+}
+
+.about {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.line {
+	height: 2px;
+	background-color: #F2EED7;
+	border: none;
+	border-color: red;
+	width: 260px;
+}
+
+.about-container {
+	/*background: url('bg.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 600px;
+*/
+    height: 800px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+	background-image: 
+	  linear-gradient(
+	    rgba(0, 0, 0, 0.3),
+	    rgba(0, 0, 0, 0.5)
+	    ),
+	    url(bg.jpg);
+}
+
+.code-snippets {
+	
+	background: 
+		linear-gradient(
+	    	#F2F2F2, #F2F2F2, #F2F2F2, #76BAD8);
+	    padding:0;
+	    margin:0;
+
+    margin-top: none;
+    padding-bottom: 40px;
+}
+
+.yellow {
+	border-top: 5px double #F5A623;
+	width: 250px;
+	border-bottom: none;
+    border-right: none;
+}
+
+.box {
+  float: left;
+  background-color: none;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 80px;
+}
+
+.clear {
+  clear: both;
+}
+
+p {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.disclaimer {
+  font-style: italic;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-and-tools {
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+.last-box {
+  margin: 40px auto;
+}
+
+.icons {
+	text-align: center;
+
+}
+
+.icon {
+	margin: 10px 0;
+
+}
+
+.contact-me {
+  height: 350px;
+  background-color: #202020;
+  padding-top: 30px;
+  }
+
+.contact-headline {
+  color: white;
+}
+
+.contact-info {
+  color: white;
+  font-size: 13px;
+  margin-top: 30px;
+}
+
+.contact-link{
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.nav-link {
+  color: #F2EED7;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  font-size: 12px;
+  width: 100px;
+  font-weight: bold;
+  margin-top: 30px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  margin-left: 30px;
+
+
+}
+
+.hire-me {
+  border-style: solid;
+  border-color: white;
+  /* border-width: 3px; */
+}
+
+@media(min-width: 768px) {
+	.box {
+		width: 42.5%;
+  		margin-left: 5%;
+	}
+}

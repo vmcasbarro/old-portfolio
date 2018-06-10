@@ -1,0 +1,285 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+		<link
+		    rel="stylesheet"
+		    href="prism-atom-dark.css"
+		    type="text/css"
+		    media="screen"
+  		/>
+
+  		<script type="text/javascript" src="prism.js"></script>
+  		<script type="text/javascript" src="prism.ruby.js"></script>
+  		<title>Vince Casbarro</title>
+  		<meta name="description" content="Vince Casbarro is a life-long learner actively diving into the world of web development.">
+  		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+
+	</head>
+
+
+
+
+
+
+	<body>
+		<div class="about-container">
+			<ul>
+			  <li><a href="#about" class="nav-link">About</a></li>
+			  <li><a href="#code-samples" class="nav-link">Code Samples</a></li>
+			  <li><a href="#web-apps" class="nav-link">Web Apps</a></li>
+			  <li><a href="#skills-and-tools" class="nav-link">Skills &amp; Tools</a></li>
+			  <li class="hire-me"><a href="#hire-me" class="nav-link">Hire Me</a></li>
+			</ul>
+			<div class="about">
+				<img src="me.jpg" class="me" />
+
+				<h1 id="about">Vince Casbarro</h1>
+
+				<h2>LEARNER</h2>
+				<hr class="line"/>
+				<p class="bio">
+					I am a speech-language pathologist working in the acute care and outpatient settings, finding the intersection of innovative problem solving, evidence-based patient care, and the art of empathy.
+					<br>
+					<br>
+					I strive to be a life-long learner, and to that end I am diving into the world of web development.
+				</p>
+
+				<p class="credits">Photo by Kody Dahl on Unsplash</p>
+			</div>
+		</div>
+		<div class="code-snippets">
+			<h3 id="code-samples">Code Snippets</h3>
+			<hr class="yellow">
+			<div class="box">
+			  <h4>Temperature Conversion</h4>
+			  <p>
+			    This ruby program will prompt the user for a temperature
+			    in degrees Celsius and let the user know what the
+			    corresponding temperature is in Fahrenheit.
+			  </p>
+			</div>
+
+			<div class="box">
+<pre><code class="language-ruby">#prompt
+puts &quot;Enter degrees in Celsius:&quot;
+celsius=gets.to_f
+
+#method
+def celsius_to_farenheit(c)
+    c*1.8+32
+end
+
+#output
+puts &quot;That is #{celsius_to_farenheit(celsius)} degrees Farenheit.&quot;</pre></code>
+			</div>
+
+			<br class="clear" />
+
+			<div class="box">
+<pre><code class="language-ruby">#prompt
+puts &quot;Enter a number you want to make an ordinal:&quot;
+number = gets.to_i
+
+#methods
+def last_digit(number)
+    number % 10
+end
+
+def last_two_digits(number)
+    number % 100
+end
+
+def ordinateur(number)
+    if last_two_digits(number) &gt;= 11 &amp;&amp; last_two_digits(number) &lt;= 13
+        return &quot;th&quot;
+
+    elsif last_digit(number) == 1
+        return &quot;st&quot;
+
+    elsif last_digit(number) == 2
+        return &quot;nd&quot;
+
+    elsif last_digit(number) == 3
+        return &quot;rd&quot;
+
+    else
+        return &quot;th&quot;
+
+    end
+end
+
+#output
+puts &quot;That's the #{number}#{ordinateur(number)} item!&quot;</pre></code>
+			</div>
+
+			<div class="box">
+			  <h4>Ordinal Challenge</h4>
+			  <p>
+			    This ruby program will convert a plain number
+			    to the ordinal of the number. So for example,
+			    if the user enters 2, it will display 2nd, if
+			    the user enters 3, it will display 3rd, etc.
+			  </p>
+	  		</div>
+
+			<br class="clear" />
+
+			<div class="box" class="last-box">
+			  <h4>Foobar</h4>
+			  <p>
+			    This ruby program is an adaptation of a classic technical
+			    interview problem which displays sequences
+			    of the Foobar pattern.
+			  </p>
+	  		</div>
+
+			<div class="box">
+<pre><code class="language-ruby" class="last-box">#prompt
+puts &quot;How many items do you want to see?&quot;
+number_of_items = gets.to_i
+
+#methods
+def remainder_is_zero(dividend, divisor)
+  if dividend % divisor == 0
+    return true
+  else
+    return false
+  end
+end
+
+def foobar(number)
+  foobar_array = []
+  element_number = 1
+
+  while element_number &lt;= number
+    if remainder_is_zero(element_number, 3) &amp;&amp; remainder_is_zero(element_number, 5)
+      foobar_array &lt;&lt; &quot;foobar&quot;
+    elsif remainder_is_zero(element_number, 3)
+      foobar_array &lt;&lt; &quot;foo&quot;
+    elsif remainder_is_zero(element_number, 5)
+      foobar_array &lt;&lt; &quot;bar&quot;
+    else
+      foobar_array &lt;&lt; element_number
+    end
+    element_number = element_number + 1
+  end
+
+  puts foobar_array
+end
+
+#output
+puts foobar(number_of_items)</pre></code>
+			</div>
+
+			<br class="clear" />
+		</div>
+
+<!--
+		<h3 id="web-apps">Web Apps</h3>
+		<hr class="yellow" />
+		<p class="disclaimer">
+			This section is a placeholder while I get started until I start producing my own work!
+		</p>
+		<div class="box">
+      		<h4>webapp one</h4>
+      		<img src="app-screenshots/splurty.png" class="full-width"/>
+      		<p>
+	          A database-powered quote generator with a mobile-first
+	          design, using the Ruby on Rails framework, HTML, and CSS.
+	          Uses Git and GitHub for version control, and launched
+	          on Heroku.
+     		</p>
+   		 </div>
+
+	  	<div class="box">
+	      <h4>Yelp Clone</h4>
+	      <img src="app-screenshots/nomster.png" class="full-width" />
+	      <p>
+	        A Yelp clone that integrates with the Google Maps API
+	        and includes features like user comments, star ratings,
+	        image uploading, and user authentication.
+	      </p>
+	    </div>
+
+    <br class="clear" />
+
+	    <div class="box">
+	      <h4>Two-Sided Market Place</h4>
+	      <img src="app-screenshots/flixter.png" class="full-width" />
+	      <p>
+	        A two-sided, video-streaming marketplace platform that
+	        features credit card payment capabilities, user role
+	        management, complex user interfaces, and advanced
+	        database relationships.
+	      </p>
+	    </div>
+	    <div class="box">
+	      <h4>Test Driven Development</h4>
+	      <img src="app-screenshots/grammable.png" class="full-width" />
+	      <p>
+	        An Instagram clone that was built using industry-standard, test-driven
+	        development following numerous red/green/refactor cycles.
+	      </p>
+	    </div>
+    <br class="clear" />
+	    <div class="box">
+	      <h4>Single Page To-Do Application</h4>
+	      <img src="app-screenshots/todoster.png" class="full-width" />
+	      <p>
+	        This single-page to-do application features a
+	        fluid user interface that– by using JavaScript–
+	        allows users to rapidly add dynamic content.
+	      </p>
+	    </div>
+	    <div class="box">
+	      <h4>Agile Team Project</h4>
+	      <img src="app-screenshots/chess.png" class="full-width" />
+	      <p>
+	        Worked on an Agile software development team building
+	        a chess application. Under the guidance of a senior software engineer,
+	        we had weekly Agile team meetings for code reviews, sprint planning,
+	        and feature assignments.
+	      </p>
+	    </div>
+    <br class="clear" />
+
+    <h3 id="skills-and-tools">Skills &amp; Tools</h3>
+    <hr class="yellow" />
+    <p class="skills-and-tools">
+      Vince is developing proficiency and expertise
+      in the following programming languages and
+      comfort with the following tools.
+    </p>
+    <div class=icons>
+	    <img src="skills-and-tools/github.png" class="icon"/>
+	    <img src="skills-and-tools/rubocop.png" class="icon"/>
+	    <img src="skills-and-tools/trello.png" class="icon"/>
+	    <img src="skills-and-tools/slack.png" class="icon"/>
+	    <img src="skills-and-tools/codeship.png" class="icon"/>
+
+	    <br class="clear" />
+	    <img src="skills-and-tools/skills.png" class="icon"/>
+    </div>
+-->
+
+    <div class="contact-me">
+      <h3 id="hire-me" class="contact-headline">Contact</h3>
+      <hr class="yellow" />
+      <p class="contact-info">
+        Currently entertaining new opportunities.
+        Please get in touch via email:
+      </p>
+      <p>
+        <a href="mailto:ken@thefirehoseproject.com" class="contact-link">
+          vincenzo.casbarro@gmail.com
+        </a>
+      </p>
+
+    </div>
+
+	</body>
+
+
+</html>
